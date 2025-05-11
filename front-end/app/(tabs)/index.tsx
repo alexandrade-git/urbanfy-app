@@ -11,7 +11,7 @@ export default function Index() {
       <StatusBar barStyle="dark-content" />
 
       <Image
-        source={require("../../assets/images/logo.png")}
+        source={require('../../assets/images/logo.png')}  // Atualize o caminho da imagem conforme necessário
         style={styles.logo}
         resizeMode="contain"
       />
@@ -35,8 +35,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
   },
   logo: {
-    width: '80%',
-    height: 180,
+    width: '180%',
+    height: 350,
     marginBottom: 60,
   },
   button: {

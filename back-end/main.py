@@ -43,7 +43,7 @@ class Relato(BaseModel):
     fotos: List[str]
 
 # Configurações do Azure
-AZURE_STORAGE_CONNECTION_STRING = 'DefaultEndpointsProtocol=https;AccountName=urbanfydados;AccountKey=jhNLK0pSevhuGOLzB2nrFo+WV0CACYtX3dG8eU4j0gNE5ksougOylID+EfeOypMc5bnZhVa+USkH+AStYKCAdg==;EndpointSuffix=core.windows.net'  # Esta chave está incompleta
+AZURE_STORAGE_CONNECTION_STRING = ''  # Colocar chave da azure
 CONTAINER_NAME = 'urbanfyimagem'
 DATABASE_URL = "/home/urbanfy/relatos/relatos.db"
 

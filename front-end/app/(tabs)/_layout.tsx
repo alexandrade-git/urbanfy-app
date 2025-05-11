@@ -1,32 +1,37 @@
-import { Tabs } from 'expo-router';
+import { Stack } from 'expo-router';
 import React from 'react';
 
-import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import TabBarBackground from '@/components/ui/TabBarBackground';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
-
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
-        tabBarStyle: { display: 'none' }, // Ocultando a barra de abas
-      }}>
-      <Tabs.Screen
+    <Stack>
+      <Stack.Screen
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          headerShown: false, // Oculta o cabeçalho na tela inicial
         }}
       />
-      {/* Não há mais a necessidade de outras telas de navegação */}
-    </Tabs>
+      <Stack.Screen
+        name="telaPrincipal"
+        options={{
+          title: 'Tela Principal',
+          headerShown: false, // Oculta o cabeçalho na tela principal
+        }}
+      />
+      <Stack.Screen
+        name="novoRelato"
+        options={{
+          title: 'Novo Relato',
+          headerShown: false, // Oculta o cabeçalho na tela de novo relato
+        }}
+      />
+      <Stack.Screen
+        name="infoRelato"
+        options={{
+          title: 'Detalhes do Relato',
+          headerShown: false, // Oculta o cabeçalho na tela de detalhes do relato
+        }}
+      />
+    </Stack>
   );
 }
