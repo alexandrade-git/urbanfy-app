@@ -28,7 +28,7 @@ app.add_middleware(
     expose_headers=["*"]
 )
 
-# Endpoint de testee
+# Endpoint de teste
 @app.get("/test")
 async def test_endpoint():
     logger.info("Test endpoint called")
